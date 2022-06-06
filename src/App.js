@@ -1,24 +1,25 @@
-import logo from './logo.svg';
+import Profile from './components/Profile.js';
+import Todo from './components/Todo.js';
 import './App.css';
 
 function App() {
+  const name = "Atul Kumar";
+  const age = 18;
+  const location = "Patna";
+  const organ = "Masai";
+  const task = [
+    { id: 1, title: "Wake up", status: true },
+    { id: 2, title: "drink tea", status: false },
+    { id: 3, title: "eat maggi", status: true },
+    { id: 4, title: "sleep", status: false }
+  ];
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+       <div id="container">
+         <Profile name = {name} age = {age} location = {location} organ = {organ}/>
+         <Todo task = {task}/>
+       </div>
+    </>
   );
 }
 
